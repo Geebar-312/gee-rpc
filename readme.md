@@ -50,4 +50,5 @@
 | Web服务器      | **Vert.x**                                                   |
 | 本地服务注册器 | `LocalRegistry` <br>基于 `ConcurrentHashMap`<br> + `key` 为服务名称<br> + `value` 为服务实现类全类名 |
 | 序列化器       | `JdkSerializer`,基于JDK原生序列化                            |
-|                |                                                              |
+| 请求处理器     | `HttpServerHandler` 借助序列化器反序列化 HTTP 请求，调用本地服务注册/序列化返回响应。 |
+| 动态代理处理器 | `ServiceProxyFactory`返回 `ServiceProxy`实例，简化对象代理过程 |
