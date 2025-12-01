@@ -11,7 +11,7 @@ public class RpcConfig {
     /**
      * 服务名称
      */
-    private String name="geebar-rpc";
+    private String name="geerpc-base";
 
     /**
      * 服务版本
