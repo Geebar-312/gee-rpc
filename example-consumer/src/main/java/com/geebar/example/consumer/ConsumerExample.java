@@ -17,7 +17,16 @@ public class ConsumerExample {
         user.setName("geebar");
 
         User newUser = userService.getUser(user);
-        System.out.println(newUser != null ? newUser.getName() : "user == null");
+
+        if (newUser != null) {
+            System.out.println(newUser.getName());
+        } else {
+            System.out.println("user == null");
+        }
+        long number = userService.getNumber();
+        System.out.println(number);
     }
 }
+
+
 

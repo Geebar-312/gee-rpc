@@ -2,3 +2,4 @@ name: geerpcyml
 version: 2.0
 serverHost: localHost
 serverPort: 8081
+mock : true

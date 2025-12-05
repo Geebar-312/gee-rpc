@@ -3,6 +3,7 @@ package com.geebar.example.provider;
 
 
 import com.geebar.example.common.service.UserService;
+import com.geebar.geerpc.RpcApplication;
 import com.geebar.geerpc.registry.LocalRegistry;
 import com.geebar.geerpc.server.HttpServer;
 import com.geebar.geerpc.server.VertxHttpServer;
