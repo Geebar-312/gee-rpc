@@ -1,2 +1,2 @@
 
-kryo=com.geebar.geerpc.serializer.KryoSerializer
+kryo=com.geebar.geerpc.serializer.impl.KryoSerializer

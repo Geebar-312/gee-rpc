@@ -1,4 +1,6 @@
-package com.geebar.geerpc.serializer;
+package com.geebar.geerpc.serializer.impl;
+
+import com.geebar.geerpc.serializer.Serializer;
 
 import java.io.*;
 

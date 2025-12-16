@@ -1,8 +1,9 @@
-package com.geebar.geerpc.serializer;
+package com.geebar.geerpc.serializer.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.geebar.geerpc.model.RpcRequest;
 import com.geebar.geerpc.model.RpcResponse;
+import com.geebar.geerpc.serializer.Serializer;
 
 import java.io.IOException;
 

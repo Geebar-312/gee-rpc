@@ -1,7 +1,8 @@
-package com.geebar.geerpc.serializer;
+package com.geebar.geerpc.serializer.impl;
 
 import com.caucho.hessian.io.HessianInput;
 import com.caucho.hessian.io.HessianOutput;
+import com.geebar.geerpc.serializer.Serializer;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
