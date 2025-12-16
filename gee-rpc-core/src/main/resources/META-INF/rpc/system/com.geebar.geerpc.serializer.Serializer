@@ -1,0 +1,3 @@
+jdk=com.geebar.geerpc.serializer.JdkSerializer
+hessian=com.geebar.geerpc.serializer.HessianSerializer
+json=com.geebar.geerpc.serializer.JsonSerializer

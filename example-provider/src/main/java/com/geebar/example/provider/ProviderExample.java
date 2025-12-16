@@ -16,7 +16,8 @@ import java.io.FileNotFoundException;
 public class ProviderExample {
 
     public static void main(String[] args) {
-        RpcApplication.init();
+
+        RpcApplication.init(".yml");
         System.out.println("Consumer config: " + RpcApplication.getRpcConfig());
         // 注册服务
         LocalRegistry.register(UserService.class.getName(), UserServiceImpl.class);

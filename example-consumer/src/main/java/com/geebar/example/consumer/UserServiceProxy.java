@@ -6,8 +6,8 @@ import com.geebar.example.common.model.User;
 import com.geebar.example.common.service.UserService;
 import com.geebar.geerpc.model.RpcRequest;
 import com.geebar.geerpc.model.RpcResponse;
-import com.geebar.geerpc.serializaer.JdkSerializer;
-import com.geebar.geerpc.serializaer.Serializer;
+import com.geebar.geerpc.serializer.JdkSerializer;
+import com.geebar.geerpc.serializer.Serializer;
 
 import java.io.IOException;
 
