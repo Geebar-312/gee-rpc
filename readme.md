@@ -78,3 +78,14 @@ Mock接口开发便于使用者与开发者快速调用接口，跑通业务，�
 
 ![ 2025-12-05 195049.png](https://s2.loli.net/2025/12/05/9LN6H8FJzATn3kd.png)
 
+## 阶段3 序列化器与SPI机制
+
+### 阶段成果
+
+1. 支持多种序列化器实现方式 `JDK + JSON + Kryo + Hessian` 实现序列化器
+2. 引入序列化器工厂，基于 `Map`存储 `SerializerKeys`-> `Serializer`的映射关系，默认使用 JDK。支持基于 key 查询 `Map`返回相应的序列化器实例
+3. 引入 SPI 机制，消除硬编码依赖，并支持用户自定义，增加扩展性
+
+
+
+![image-20251216203120141](https://s2.loli.net/2025/12/16/EmB4DrdCyFqoUXf.png)
