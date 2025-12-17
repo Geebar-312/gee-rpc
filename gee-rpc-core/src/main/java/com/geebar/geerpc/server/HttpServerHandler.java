@@ -3,7 +3,7 @@ package com.geebar.geerpc.server;
 import com.geebar.geerpc.RpcApplication;
 import com.geebar.geerpc.model.RpcRequest;
 import com.geebar.geerpc.model.RpcResponse;
-import com.geebar.geerpc.registry.LocalRegistry;
+import com.geebar.geerpc.registry.impl.LocalRegistry;
 import com.geebar.geerpc.serializer.Serializer;
 import com.geebar.geerpc.serializer.SerializerFactory;
 import io.vertx.core.Handler;

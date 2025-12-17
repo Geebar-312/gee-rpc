@@ -1,4 +1,4 @@
-package com.geebar.geerpc.registry;
+package com.geebar.geerpc.registry.impl;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

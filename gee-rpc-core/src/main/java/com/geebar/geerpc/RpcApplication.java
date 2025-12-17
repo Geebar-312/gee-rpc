@@ -1,8 +1,11 @@
 package com.geebar.geerpc;
 
 import cn.hutool.core.util.StrUtil;
+import com.geebar.geerpc.config.RegistryConfig;
 import com.geebar.geerpc.config.RpcConfig;
 import com.geebar.geerpc.constant.RpcConstant;
+import com.geebar.geerpc.registry.Registry;
+import com.geebar.geerpc.registry.RegistryFactory;
 import com.geebar.geerpc.utils.ConfigUtils;
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,6 +22,10 @@ public class RpcApplication {
     public static void init(RpcConfig newConfig) {
         rpcConfig = newConfig;
         log.info("Rpc Config init succeed!, config = {}", newConfig);
+        RegistryConfig registryConfig = rpcConfig.getRegistryConfig();
+        Registry registry = RegistryFactory.getInstance(registryConfig.getRegistry());
+        registry.init(registryConfig);
+        log.info("registry init, config = {}", registryConfig);
     }
 
 
