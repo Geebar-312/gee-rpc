@@ -8,6 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class LocalRegistry {
 
+
     /**
      * 注册信息存储
      */
