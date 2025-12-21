@@ -96,7 +96,7 @@ public class EtcdRegistry implements Registry {
     @Override
     public List<ServiceMetaInfo> serviceDiscovery(String serviceKey) {
         // 优先从缓存获取服务
-        List<ServiceMetaInfo> cachedServiceMetaInfoList = registryServiceCache.readCache();
+        List<ServiceMetaInfo> cachedServiceMetaInfoList = registryServiceCache.readCache(serviceKey);
         if (cachedServiceMetaInfoList != null) {
             System.out.println("【缓存命中】从本地内存读取服务列表");
             return cachedServiceMetaInfoList;
@@ -125,7 +125,7 @@ public class EtcdRegistry implements Registry {
                     })
                     .collect(Collectors.toList());
             // 写入服务缓存
-            registryServiceCache.writeCache(serviceMetaInfoList);
+            registryServiceCache.writeCache(serviceKey,serviceMetaInfoList);
             return serviceMetaInfoList;
         } catch (Exception e) {
             throw new RuntimeException("获取服务列表失败", e);
@@ -203,7 +203,7 @@ public class EtcdRegistry implements Registry {
                         case DELETE:
                             // 清理注册服务缓存
                             System.out.println("【监听】检测到节点下线，准备清理本地缓存，Key: " + serviceNodeKey);
-                            registryServiceCache.clearCache();
+                            registryServiceCache.clearCache(serviceNodeKey);
                             break;
                         case PUT:
                         default:
